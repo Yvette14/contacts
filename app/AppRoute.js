@@ -1,7 +1,7 @@
 import React from 'react';
-import Contacts from "./src/component/Contacts";
+import Contacts from "./src/components/Contacts";
 import {Router, Scene, Stack} from "react-native-router-flux";
-import Detail from "./src/component/Detail";
+import Detail from "./src/components/Detail";
 
 const AppRouter = () => (
   <Router>

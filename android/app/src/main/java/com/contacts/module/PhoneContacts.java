@@ -27,7 +27,6 @@ public class PhoneContacts extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void show(Promise promise) {
-//        Toast.makeText(getReactApplicationContext(), "test", Toast.LENGTH_LONG).show();
         WritableNativeArray array = new WritableNativeArray();
 
         Context context = getReactApplicationContext();

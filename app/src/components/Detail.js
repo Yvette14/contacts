@@ -11,7 +11,7 @@ export default class Detail extends Component {
 
     return (
       <View>
-        <Text>{this.props.item.firstName}</Text>
+        <Text>{this.props.item.fullName}</Text>
       </View>
     )
   }

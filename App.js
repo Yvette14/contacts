@@ -4,21 +4,26 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 import {
-  Platform,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
 import AppRouter from "./app/AppRoute";
+import reducer from './app/src/reducer';
+
+const store = createStore(reducer);
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <AppRouter/>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <AppRouter/>
+        </View>
+      </Provider>
     );
   }
 }
