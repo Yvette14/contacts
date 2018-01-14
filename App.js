@@ -6,15 +6,16 @@
 
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {
   StyleSheet,
   View
 } from 'react-native';
 import AppRouter from "./app/AppRoute";
 import reducer from './app/src/reducer';
+import logger from './app/src/middleware/logger';
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(logger));
 
 export default class App extends Component<{}> {
   render() {
